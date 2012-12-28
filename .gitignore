@@ -1,0 +1,5 @@
+.bash*
+.DS_Store
+.mysql_history
+.profile
+.cache
