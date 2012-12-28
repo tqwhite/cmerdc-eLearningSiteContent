@@ -3,3 +3,4 @@
 .mysql_history
 .profile
 .cache
+.ssh/*
