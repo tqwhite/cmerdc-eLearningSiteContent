@@ -4,3 +4,4 @@
 .profile
 .cache
 .ssh/*
+.bin/*
