@@ -3,30 +3,104 @@ background:white;
 font-family: 'Open Sans', sans-serif;
 }
 
+h2 {
+font-family: 'Satisfy', cursive;
+font-size:24px;
+margin-bottom: 15px;
+}
+h1 {
+font-family: 'Satisfy', cursive;
+font-size:36px;
+margin-bottom: 15px;
+}
+/* - special --*/
+.fancy,
+.fancy ul {
+  list-style-type: none;
+  margin: 0 ;
+  padding: 0;
+	-moz-text-size-adjust:auto; 
+	-webkit-text-size-adjust:auto; 
+	-ms-text-size-adjust:auto;
+}
+
+.fancy li {
+  font: 200 16px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+  margin-right: 75px;
+}
+
+.fancy li:last-child {
+  border: none;
+}
+
+.fancy li a {
+  text-decoration: none;
+  display: block;
+  width: 535px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.fancy li a:hover {
+  font-size: 18px;
+  background: #f6f6f6;
+}
+
+.bulleted,
+.bulleted ul {
+  list-style-type: circle;
+  margin: 5px ;
+  padding: 0;
+	-moz-text-size-adjust:auto; 
+	-webkit-text-size-adjust:auto; 
+	-ms-text-size-adjust:auto;
+}
+
+.bulleted li {
+  font: 16px Helvetica, Verdana, sans-serif;
+  margin-left:12px;
+  margin-right:75px;
+}
+
+/* -- Header --*/	
 .headerblock{
-	height:70px;width:1000px;margin:0px 0px 0px 0px;
+	height:100px;width:1000px;margin:0px 0px 0px 0px;
 	text-align:left;
 }
 
 .headerblock .logo{
-font-size:24pt;margin:10px 0px 0px 30px;color:#2a7fff;
-width:500px;
+font-size:24pt;
+margin:0px 0px 0px 20px;
+color:#2a7fff;
+width:300px;
 }
 
 .headerblock .fullname{
-margin:0px 0px 0px 32px;clear:both;color:#666;
-width:500px;
+	margin:-25px 0px 0px 0px; /*negative top margin to move above the navbar */
+	color:#666;
+	float:right;
+	text-transform: uppercase;
+	width:350px; /*this moves the left justified tagline horizontally*/
 }
 
 .headerblock .tagLine{
 	font-family: 'Satisfy', cursive;
 	font-size:18pt;
-	margin:-28px 0px 0px 0px;
-	float:right;color:#666;
+	margin:8px 0px 0px 20px;
+	float:left;color:#666;
 	height:0px; /*for some reason this block rides at the bottom of the enclosing div, I set this so it doesn't hang out.*/
-	width:415px; /*this moves the left justified tagline horizontally*/
+	width:425px; /*this moves the left justified tagline horizontally*/
 }
-
+.headerblock .livechat {
+ margin-left:auto !important;
+ margin-right:auto !important;
+ vertical-align:top;
+ }
 .navBlock{
 width:1000px;background:#f2f2f2;height:50px;margin:0px 0px 20px 0px;
 }
@@ -36,7 +110,7 @@ width:860px;
 padding-top:13px;
 margin:0px 70px 20px 70px;
 }
-
+/* -- Footer --*/
 .footerContainer{
 margin-top:20px;background:#f2f2f2;width:1000px;min-height:200px;padding-top:20px;
 }
@@ -54,6 +128,9 @@ float:left;margin-left:20px;margin-right:20px;color:black;font-size:10pt;margin-
 font-weight:bold;border-bottom:1pt solid gray;margin-bottom:5px;
 color:#2a7fff;
 }
+
+
+/*--SiteMap --*/
 
 .sitemapContainer{
 }
@@ -80,16 +157,70 @@ background:#ccc;
 
 .contactFooterContent{
 color:#666;
-width:1000px;text-align:center;font-size:10pt;margin-top:25px;border-top:1pt solid gray;padding-bottom:10px;padding-top:10px;margin-top:10px;
+width:1000px;text-align:center;font-size:10pt;margin-top:25px;border-top:1pt solid gray;padding-bottom:10px;padding-top:10px;margin-top:10px; margin-left:auto !important;
+margin-right:auto !important;
 }
+
+#socialbuttons {
+padding:10px;
+text-align:left;
+margin-left:auto;
+margin-right:auto;
+}
+
+/* --Main Content --*/
 
 .mainContentContainer{
 
 }
 
+#first {
+background-color:#999999;
+background-image: url('http://elearning.technology.<!rootDomainSegment!>/images/chalkboard-green.png');
+overflow:hidden;
+padding:15px;
+}
+
+#panelList {
+width:598px;
+height:90%;
+border: none !important;
+}
+
+#border {
+position:inline-block;
+width:90% !important;
+height: 93% !important;
+z-index:99;
+padding:0;
+margin:0 21px;
+border: 10pt solid rgb(230, 227, 227);
+border-radius: 0px 25px 5px 25px;
+}
+.informationPanel{
+color:white;
+font-size:.8em;
+position:inline-block;
+width:95%;
+height:93%;
+padding: 15px;
+	-moz-text-size-adjust:auto; 
+	-webkit-text-size-adjust:auto; 
+	-ms-text-size-adjust:auto;
+}
+.informationPanel h1 h2 {
+color:white !important;
+}
+.panel {
+position:inline-block;
+z-index:-5;
+}
+
 .panelBlock{
+	position:relative;
+	z-index:-1;
 	width:900px;
-	height:500px;
+	height:448px;
 	font-size:14pt;
 	color:red;
 	color: #2a7fff;
@@ -121,16 +252,42 @@ margin-top:30px;
 font-size:18pt;
 }
 
-.anythingSlider-default.activeSlider .anythingControls a{
+.anythingSlider-default.activeSlider .anythingControls  a{
 	background:#f2f2f2 !important;
 	color:#ccc !important;
 }
-.anythingSlider-default.activeSlider .anythingWindow {
-	border-color: white !important;
+.anythingSlider-default.activeSlider .anythingWindow  {
+	border-color: transparent !important;
 	border-bottom:2pt solid #f2f2f2 !important;
 }
 
+#tabDisplayContainer {  
+position:inline-block;
+z-index:-10;
+ margin-left:18px; /* to move first tab over to see the bevel border */
+margin-bottom: -15px; /* to give buttons a tab look */
+vertical-align:text-top;
+}
 
+
+.sliderTopControls a {
+ font-size:16px;
+	-moz-text-size-adjust:auto; 
+	-webkit-text-size-adjust:auto; 
+	-ms-text-size-adjust:auto;
+ }
+ 
+ .sliderTopControls li {
+    display: inline-block; /* added inline-block to control height of tab */
+	height:40px; /*to increase the tab height */
+    margin: 0px 3px;
+    padding: 0px 20px;
+    background: none repeat scroll 0% 0% rgb(230, 227, 227);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: -2px -2px 2px rgb(136, 136, 136) inset;
+	}
+
+ 
 /*NAVIGATION BAR STYLES =========================================*/
 
 ul.dropdown a:hover{
