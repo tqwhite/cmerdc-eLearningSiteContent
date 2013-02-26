@@ -1,0 +1,50 @@
+#caseStudy {
+font-size:0.8em !important;
+padding:25px 500px 25px 25px;
+}
+
+#caseStudy ul #panelList ul{
+width: 500px !important;
+font-size: 0.80em !important;
+padding-bottom:5px;
+
+}
+
+#caseStudy li{
+padding-bottom:5px;
+}
+
+
+
+#caseStudies .container
+{	width:450px;
+	height: auto;
+   margin-top:8px;
+   margin-bottom: 10px;
+}
+
+#caseStudies label
+{
+   font-family : Arial, sans-serif;
+   font-size:0.8em;
+   font-weight: bold;
+}
+
+#caseStudies fieldset
+{
+   padding:10px;
+   border:1px solid #ccc;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+border-radius: 10px;   
+}
+
+#caseStudies legend, h2
+{
+   font-family : Arial, sans-serif;
+   font-size: 1.3em;
+   font-weight:bold;
+   color:#333;
+   padding: 0 3px;
+}
