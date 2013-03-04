@@ -10,6 +10,8 @@ stylesheet does not affect the other elements at all!
    width:500px;
    padding:10px;
    border:1px solid #ccc;
+   background-color:#e8eef7;
+   overflow:hidden;
 -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
 -khtml-border-radius: 10px;
@@ -99,6 +101,7 @@ border-radius: 10px;
 {
    margin-top:8px;
    margin-bottom: 10px;
+   overflow:hidden;
 }
 
 #contactus .error
