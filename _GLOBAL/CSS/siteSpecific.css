@@ -1,7 +1,4 @@
-body{
-background:white;
-font-family: 'Open Sans', sans-serif;
-}
+
 
 h2 {
 font-family: 'Satisfy', cursive;
@@ -83,7 +80,7 @@ width:300px;
 .headerblock .fullname{
 	margin:-25px 0px 0px 0px; /*negative top margin to move above the navbar */
 	color:#666;
-	float:right;
+	float:left;
 	text-transform: uppercase;
 	width:350px; /*this moves the left justified tagline horizontally*/
 }
