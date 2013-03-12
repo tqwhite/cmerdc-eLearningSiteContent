@@ -1,4 +1,7 @@
-
+body{
+background:white;
+font-family: 'Open Sans', sans-serif;
+}
 
 h2 {
 font-family: 'Satisfy', cursive;
@@ -80,17 +83,18 @@ width:300px;
 .headerblock .fullname{
 	margin:-25px 0px 0px 0px; /*negative top margin to move above the navbar */
 	color:#666;
-	float:left;
+	float:right;
 	text-transform: uppercase;
 	width:350px; /*this moves the left justified tagline horizontally*/
 }
 
-.tagLine{
+.tagLineb{
 	font-family: 'Satisfy', cursive;
 	font-size:18pt;
 	color: #000000 !important;
 	margin:8px 0px 0px 20px;
-	float:left;color:#666;
+	float:left !important;
+	color:#666;
 	height:0px; /*for some reason this block rides at the bottom of the enclosing div, I set this so it doesn't hang out.*/
 	width:425px; /*this moves the left justified tagline horizontally*/
 }
@@ -330,3 +334,11 @@ ul.dropdown ul li{
 	color: #000;
 }
 
+/* My Live Chat */
+#MyLiveChatContainer {
+width:175px;
+}
+#livechat div{
+width: 175px;
+z-index:-10;
+}
