@@ -1,22 +1,45 @@
-<style>
-fieldset
-{  font-size:.8em !important;
-   padding:10px;
-   border:1px solid #ccc;
--moz-border-radius: 10px;
--webkit-border-radius: 10px;
--khtml-border-radius: 10px;
-border-radius: 10px;   
+<style type="text/css">
+#tabDisplayContainer { 
+position:relative;
+z-index: 20;
 }
 
-legend, h2
-{
-   font-family : Arial, sans-serif;
-   font-size: 1.3em;
-   font-weight:bold;
-   color:#333;
-   padding: 0 3px;
-}</style>
+.sliderTopControls li {
+color: #000000 !important;
+text-decoration:none;
+font: 200 16px/1.5 Helvetica, Verdana, sans-serif;
+border-bottom: 1px solid #ccc;
+background: none repeat scroll 0% 0% transparent !important;
+	border-radius: .5em .5em 0 0 !important;
+	-webkit-border-radius: .5em .5em 0 0; 
+	-moz-border-radius: .5em .5em 0 0;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 -2px 2px rgb(136, 136, 136) inset;
+	/*--none--*/
+	border-top: none;
+	border-right:none;
+	border-left:none;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+	background: -moz-linear-gradient(top,  #ffffff,  #ffffff);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff');
+}
+  
+ .sliderTopControls a {
+	color: #000000 !important;
+	font-size: .9em;
+	vertical-align:top;
+	}
+	
+.sliderTopControls a:hover {
+ color: #e1e1e1 !important;
+ }
+ 
+.sliderTopControls a:active {
+ color: #000000 !important;
+ }
+
+</style> 
 <div id="case" class="b" style='padding:25px; width:550px !important; height:350px !important;'>
 <h1>Case Studies</h1>
 <h2>If others can do it, so can you!</h2>
@@ -26,9 +49,9 @@ legend, h2
 <legend>Need Some Examples?</legend>
 Here are three case studies to help you see how others are using eLearning technology to help students learn.</br></br>
 <ul class="fancy">
-	<li><a href="http://elearning.technology.<!rootDomainSegment!>/case/#id='case1'">Ms. Smith's 6th Grade Flipped Math Class</a></li>
-	<li><a href="http://elearning.technology.<!rootDomainSegment!>/case/#id='case2'">New Beginnings Online School</a></li>
-	<li><a href="http://elearning.technology.<!rootDomainSegment!>/case/#id='case3'">Mr. Forester Tech Coordinator &#8722; Extraordinaire</a></li>
+	<li><a href="http://elearning.technology.<!rootDomainSegment!>/case/#&id=case1">Ms. Smith's 6th Grade Flipped Math Class</a></li>
+	<li><a href="http://elearning.technology.<!rootDomainSegment!>/case/#&id=case2&panel1-2">New Beginnings Online School</a></li>
+	<li><a href="http://elearning.technology.<!rootDomainSegment!>/case/#&id=case3&panel1-3">Mr. Forester Tech Coordinator &#8722; Extraordinaire</a></li>
 </ul>
 </fieldset>
 </div>
