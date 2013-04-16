@@ -344,7 +344,7 @@ ul.dropdown li:hover{
 	background: #F3D673;
 	color: #2a7fff;
 }
-ul.dropdown li.hover a{
+ul.dropdown li:hover a{
 	color: black;
 }
 
