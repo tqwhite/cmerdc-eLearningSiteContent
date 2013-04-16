@@ -27,6 +27,7 @@ margin-bottom: 15px;
 .fancy li {
   font: 200 16px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
+  border-bottom-width:300px;
   margin-right: 75px;
 }
 
