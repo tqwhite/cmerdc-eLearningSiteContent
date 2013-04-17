@@ -16,6 +16,8 @@ margin-bottom: 15px;
 /* - special --*/
 .fancy,
 .fancy ul {
+  display: block;
+  width:400px;
   list-style-type: none;
   margin: 0 ;
   padding: 0;
@@ -37,7 +39,7 @@ margin-bottom: 15px;
 .fancy li a {
   text-decoration: none;
   display: block;
-
+  width:400px;
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
   -o-transition: font-size 0.3s ease, background-color 0.3s ease;
@@ -49,6 +51,7 @@ margin-bottom: 15px;
   font-size: 18px;
   background: #f6f6f6;
 }
+
 
 .bulleted,
 .bulleted ul {
@@ -102,6 +105,7 @@ width:300px;
  margin-right:auto !important;
  vertical-align:top;
  }
+ /*====NAV BLOCK ====*/
 .navBlock{
 width:1000px;background:#f2f2f2;height:50px;margin:0px 0px 20px 0px;
 }
@@ -145,6 +149,17 @@ padding:15px;
 width:598px;
 border: none !important;
 }
+#panelList ul{ /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window.*/
+	position: relative;
+	display: flex-box;
+}
+.activeSlider {
+	width:610px !important; /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window. width cannot be 890px otherwise  not all text cannot be seen in the panels.*/
+	}
+#contentList ul {
+width: 610px !important;
+}
+
 
 #border {
 position:inline-block;
@@ -186,7 +201,6 @@ z-index:-5;
 
 }
 
-
 .panelBlock{
 	position:relative;
 	z-index:-1;
@@ -221,6 +235,18 @@ font-style:italic;
 margin-bottom:30px;
 margin-top:30px;
 font-size:18pt;
+}
+
+/*===========Control Arrows ============*/
+.anythingSlider-default 
+.arrow a {
+margin: -90px 5px 5px !important; /* SN to move arrows up and down and keep them off the border */
+}
+.back {
+left:-3px !important;
+}
+ .forward {
+right:-10px !important; /* SN to move the right arrow off the border so it can more easily be seen */
 }
 
 /*---------Tab Look with Hoover ---*/
