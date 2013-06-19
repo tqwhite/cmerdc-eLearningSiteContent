@@ -14,10 +14,11 @@ font-size:36px;
 margin-bottom: 15px;
 }
 /* - special --*/
-.fancy,
-.fancy ul {
+#fancy,
+#fancy ul {
   display: block;
   width:400px;
+  height: auto !important;
   list-style-type: none;
   margin: 0 ;
   padding: 0;
@@ -26,17 +27,17 @@ margin-bottom: 15px;
 	-ms-text-size-adjust:auto;
 }
 
-.fancy li {
+#fancy li {
   font: 200 16px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
   margin: 1px 200px 1px 5px !important;
 }
 
-.fancy li:last-child {
+#fancy li:last-child {
   border: none;
 }
 
-.fancy li a {
+#fancy li a {
   text-decoration: none;
   display: block;
   width:400px;
@@ -47,11 +48,22 @@ margin-bottom: 15px;
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
 
-.fancy li a:hover {
+#fancy li a:hover {
   font-size: 18px;
   background: #f6f6f6;
 }
-
+.newslink,
+a.newslink :link{
+	color:white !important;
+	text-decoration: underline;
+	}
+a.newslink:visited {
+	color:#9e9e9e !important;
+	}
+a.newslink:hover{
+	color:rgb(125,185,232) !important;
+	background: #eee;
+	}
 
 .bulleted,
 .bulleted ul {
@@ -135,7 +147,8 @@ margin-right:auto;
 /* --Main Content --*/
 
 .mainContentContainer{
-/*height:auto;*/
+min-height: 600px;
+max-height: 980px;
 }
 
 #first {
@@ -147,24 +160,33 @@ padding:15px;
 
 #panelList {
 width:598px;
+height: 100% !important;
+min-height: 448px;
+max-height:980px;
 border: none !important;
 }
 #panelList ul{ /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window.*/
 	position: relative;
 	display: flex-box;
 }
+.ie7 #panelList ul{ /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window.*/
+	position: relative;
+	/*height: 450px !important; */
+	}
+
 .activeSlider {
 	width:610px !important; /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window. width cannot be 890px otherwise  not all text cannot be seen in the panels.*/
 	}
-#contentList ul {
+#contentList ul{
 width: 610px !important;
+height: auto !important;
 }
 
 
 #border {
-position:inline-block;
+display:inline-block;
 width:550px;
-height: 93% !important;
+/*height: 93% !important; */
 z-index:99;
 padding:0;
 margin:0 21px;
@@ -264,13 +286,40 @@ right:-10px !important; /* SN to move the right arrow off the border so it can m
 }
 
 #tabDisplayContainer {  
-position:inline-block;
-z-index:-10;
- margin-left:22px; /* to move first tab over to see the bevel border */
-margin-bottom: -10px; /* to give buttons a tab look */
-vertical-align:text-top;
+	position:inline-block;
+	z-index:-10;
+	 margin-left:22px; /* to move first tab over to see the bevel border */
+	margin-bottom: -10px; /* to give buttons a tab look */
+	vertical-align:text-top;
 }
+/*--- IE Styles for tabs ----*/
+.ie7 .contentListActivator {
+	display:block !important;
+	list-style-type:none !important;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 5px 5px;
+    height: 28px;
+    margin: 0px 0px;
+	border: 1px solid #0078a8 !important;
+	background: rgb(125,185,232);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#0078a5',GradientType=0 ) !important; /* IE6-9 */
+	}
+	
+.ie8 .contentListActivator {
+	display:block !important;
+	list-style-type:none !important;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 5px 5px;
+    height: 28px;
+    margin: 0px 0px;
+	border: 1px solid #0078a8 !important;
+	background: rgb(125,185,232);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#0078a5',GradientType=0 ) !important; /* IE6-9 */
+	}
 
+/* Gradient tab controls */
 
 .sliderTopControls a {
 	color: rgb(255, 255, 255) !important;
@@ -287,7 +336,7 @@ vertical-align:text-top;
  }
 
 .sliderTopControls li {
-    display: inline-block;
+    display: inline-block !important;
 	outline: none;
 	cursor: pointer;
 	text-align: center;
@@ -304,15 +353,45 @@ vertical-align:text-top;
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	box-shadow: 0 -2px 2px rgb(136, 136, 136) inset;
 	/*--forblue--*/
-background: rgb(125,185,232); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(125,185,232,1) 0%, rgba(32,124,202,1) 49%, rgba(41,137,216,1) 50%, rgba(0,120,165,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,1)), color-stop(49%,rgba(32,124,202,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(100%,rgba(0,120,165,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#0078a5',GradientType=0 ); /* IE6-9 */
+	background: rgb(125,185,232); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(125,185,232,1) 0%, rgba(32,124,202,1) 49%, rgba(41,137,216,1) 50%, rgba(0,120,165,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,1)), color-stop(49%,rgba(32,124,202,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(100%,rgba(0,120,165,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#0078a5',GradientType=0 ); /* IE6-9 */
 
+}
+.ie7 .sliderTopControls li {
+	float:left;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 5px 5px;
+    height: 28px;
+    margin: 0px 0px;
+	border: 1px solid #0078a8;
+	border-radius:0;
+	/*--forblue--*/
+	background: linear-gradient(to bottom,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#0078a5',GradientType=0 ); /* IE6-9 */
+}
+.ie8 .sliderTopControls li {
+	float:left;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	padding: 5px 5px 5px;
+    height: 28px;
+    margin: 0px 0px;
+	border: 1px solid #0078a8;
+	border-radius:0;
+	/*--forblue--*/
+	background: linear-gradient(to bottom,  rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(0,120,165,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#0078a5',GradientType=0 ); /* IE6-9 */
 }
 .ie9 .sliderTopControls li {
 display: inline-block;
@@ -330,24 +409,39 @@ border: 1px solid #0078a8;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
 	box-shadow: 0 -2px 2px rgb(136, 136, 136) inset;
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#0078a5',GradientType=0 ); /* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#0078a5',GradientType=0 ); /* IE6-9 */
 }
 .sliderTopControls li:hover {	text-decoration: none;
 	/*--forblue--*/
 	color: rgb(255, 255, 255);
 	background: rgb(0,120,165); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(0,120,165,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,120,165,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078a5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top,  rgba(0,120,165,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,120,165,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078a5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 
 }
+
+.ie7 .sliderTopControls li:hover {
+	text-decoration: none;
+	/*--forblue--*/
+	color: rgb(255, 255, 255);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078a5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+.ie8 .sliderTopControls li:hover {
+	text-decoration: none;
+	/*--forblue--*/
+	color: rgb(255, 255, 255);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078a5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+
 .ie9 .sliderTopControls li:hover {	
-text-decoration: none;
-color: rgb(255, 255, 255);
+	text-decoration: none;
+	color: rgb(255, 255, 255);
 	background: rgb(0,120,165); /* Old browsers */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078a5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 }
@@ -358,15 +452,17 @@ color: rgb(255, 255, 255);
 
 	color: #80bed6;
 	background: rgb(0,120,165); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(0,120,165,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,120,165,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078a5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top,  rgba(0,120,165,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,120,165,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,120,165,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078a5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 } 
  
+
+
  
 
 /*======= NAVIGATION BAR STYLES =========================================*/
