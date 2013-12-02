@@ -164,7 +164,7 @@ border: none !important;
 #panelList ul{ /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window.*/
 	position: relative;
 	display: flex-box;
-	height: 93% !important;
+	/*height: 93% !important; */
 }
 .ie7 #panelList ul{ /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window.*/
 	position: relative;
