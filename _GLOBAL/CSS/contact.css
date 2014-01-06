@@ -7,10 +7,10 @@ stylesheet does not affect the other elements at all!
 
 #contactus fieldset
 {
-   width:500px;
+   width:90%;
    padding:10px;
    border:1px solid #ccc;
-   background-color:#e8eef7;
+  /* background-color:#e8eef7; */
    overflow:hidden;
 -moz-border-radius: 10px;
 -webkit-border-radius: 10px;
@@ -49,7 +49,7 @@ border-radius: 10px;
 
 }
  #contactus .ss-form-desc {
-	width:445px;
+	width:89%;
 	}
 
 #contactus input[type="text"]
@@ -159,6 +159,7 @@ border-radius: 10px;
 
 #contactInfo {
 float:left;
+width: 100%;
 padding:10px;
 font-size:.8em;
 }
