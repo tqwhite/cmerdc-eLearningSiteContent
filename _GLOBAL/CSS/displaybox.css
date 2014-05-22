@@ -1,0 +1,55 @@
+/*box effects -----*/
+.moduletable {
+  height: auto;
+}
+
+.ct_left .moduletable_ct_darkBox, .ct_left .moduletable_ct_lightBox, .ct_left .moduletable_ct_linkList
+.ct_right .moduletable_ct_darkBox, .ct_right .moduletable_ct_lightBox, .ct_right .moduletable_ct_linkList {
+  margin: 0 0 30px 0;
+}
+
+.ct_left .moduletable, .ct_right .moduletable {
+  padding: 0 0 30px 0;
+}
+
+.moduletable_ct_darkBox, .moduletable_ct_lightBox {
+  /*width: 22%;*/
+  float: left;
+  padding: 12px 5px 20px 5px;
+  margin: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25); 
+  box-shadow:0 1px 4px rgba(0,0, 0, 0.25);
+  -pie-box-shadow: 0 2px 0px rgba(0, 0, 0, 0.15);
+}
+img .moduletable_ct_darkBox, img .moduletable_ct_lightBox {
+	max-width:100% !important;
+	padding: 2px 2px;
+	border: none;
+	}
+.inside {
+	position:relative;
+	z-index:5;
+	background: none repeat scroll 0px 0px rgb(249, 249, 249);
+	border-bottom: 1px solid rgb(181, 181, 181);
+	border-left: 1px solid rgb(181, 181, 181);
+	border-right: 1px solid rgb(181, 181, 181);
+	height: 329px !important;
+	margin: 0 !important;
+	padding:0 !important;
+	width: 395px !important;
+}
+
+#videobox {
+	position:relative;
+	z-index:3;
+	background: url("../images/box-shadow.png") no-repeat scroll 0px bottom transparent;
+	float: left;
+	height: 349px;
+	margin-left: 20px !important;
+	margin-bottom: 20px;
+	width: 435px;
+	text-align: center; 
+	vertical-align: middle; 
+	padding: 20px 10px 20px 10px;
+	}
