@@ -145,10 +145,7 @@ Specifically these: .footerSiteDrectoryBlock, .footerSiteDrectoryBlock .sitemapB
 
 /* =================Main Content ===================*/
 
-.mainContentContainer{
-/*min-height: 600px;*/
-/*max-height: 980px; */
-}
+
 #panelContainer {
 overflow: visible !important; /* So the Arrows show */
 }
@@ -156,15 +153,13 @@ overflow: visible !important; /* So the Arrows show */
 
 #panelList {
 width:598px;
-height: auto !important; 
-min-height: 448px;
-max-height:1000px;
 border: none !important;
+height: auto !important;
+min-height: 500px !important;
 }
-#panelList ul{ /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window.*/
+#panelList ul li{ /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window.*/
 	position: relative;
-	display: flex-box;
-	/*height: 93% !important; */
+	display: block;
 }
 .ie7 #panelList ul{ /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window.*/
 	position: relative;
@@ -174,9 +169,10 @@ border: none !important;
 /*.activeSlider {
 	width:610px; /*  SN Arrow can be controled by the .back and .forward classes instead so this doesn't mess up the whole layout of the window. width cannot be 890px otherwise  not all text cannot be seen in the panels.
 	} */
+
 #contentList ul{
 width: 610px;
-/*height: auto !important; */
+height: auto !important; 
 }
 
 .informationPanel{
@@ -316,7 +312,7 @@ border: 5px solid #d4d4d4;
 }
 
 .metal.linear {
-  width: 570px;
+  width: 95%; /* Changed from fixed 570px to 95% to accomodate the different panel width environments */
   border-radius: .5em;
 }
 .metal .informationPanel {
