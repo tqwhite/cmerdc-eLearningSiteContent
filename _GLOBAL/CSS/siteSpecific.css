@@ -1,12 +1,33 @@
 BODY
-{background-color: white !important;}
+	{background-color: white !important;}
+
+/*---Slider Specific ---*/
+.anythingWindow {
+	background-color: #eee;
+	}
+.anythingWindow  DIV{
+	padding: .8em;
+	}
+	
+/*---- Buttons ----*/
+a .btn .btn-success {
+	color:white !important;
+	font-weight: bold !important;
+	}
+.btn .btn-success a:hover,
+.btn .btn-success a:active,
+.btn .btn-success a:visited,
+.btn .btn-success a:focus,
+.btn .btn-success .active a {
+	color: white !important;
+	}
 /*----Social Buttons ---*/
 #socialbuttons {
-padding:10px;
-text-align:left;
-margin-left:auto;
-margin-right:auto;
-}
+	padding:10px;
+	text-align:left;
+	margin-left:auto;
+	margin-right:auto;
+	}
 
 
 
