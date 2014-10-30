@@ -10,15 +10,15 @@ BODY
 	}
 	
 /*---- Buttons ----*/
-a .btn .btn-success {
+.btn-success{
 	color:white !important;
 	font-weight: bold !important;
 	}
-.btn .btn-success a:hover,
-.btn .btn-success a:active,
-.btn .btn-success a:visited,
-.btn .btn-success a:focus,
-.btn .btn-success .active a {
+.btn-success :hover,
+.btn-success :active,
+.btn-success :visited,
+.btn-success :focus,
+.btn-success .active  {
 	color: white !important;
 	}
 /*----Social Buttons ---*/
