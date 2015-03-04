@@ -9,7 +9,7 @@ BODY
 	padding: .8em;
 	}
 	
-/*---- Buttons ----*/
+/*---- Buttons Success----*/
 .btn-success{
 	color:white !important;
 	font-weight: bold !important;
@@ -21,8 +21,36 @@ BODY
 .btn-success .active  {
 	color: white !important;
 	}
+	
+/*---- Buttons Primary----*/
+.btn-primary{
+	color:white !important;
+	font-weight: bold !important;
+	}
+.btn-primary :hover,
+.btn-primary :active,
+.btn-primary :visited,
+.btn-primary :focus,
+.btn-primary .active  {
+	color: white !important;
+	}
+	
+/*---- Buttons Info----*/
+.btn-info{
+	color:white !important;
+	font-weight: bold !important;
+	}
+.btn-info :hover,
+.btn-info :active,
+.btn-info :visited,
+.btn-info :focus,
+.btn-info .active  {
+	color: white !important;
+	}
+	
 /*----Social Buttons ---*/
 #socialbuttons {
+	display: block;
 	padding:10px;
 	text-align:left;
 	margin-left:auto;
