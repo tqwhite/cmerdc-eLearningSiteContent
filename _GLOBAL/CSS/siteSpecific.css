@@ -9,6 +9,27 @@ BODY
 	padding: .8em;
 	}
 	
+/*---- Header -----------*/
+.page-header {
+	border-bottom: 0 none !important;
+	margin: 20px 0px 10px !important;
+	}
+	
+/*----- Typography --*/
+.tagLine {
+	height: 40px;
+	font-family: "Satisfy",cursive;
+	font-size: 18pt;
+	margin: 40px 0px 0px;
+	color: #666;
+}
+
+@media only screen and (max-width : 768px) {
+	.tagLine {
+		margin: 0px 10px 0px;
+		}
+}
+	
 /*---- Buttons Success----*/
 .btn-success{
 	color:white !important;
@@ -56,6 +77,7 @@ BODY
 	margin-left:auto;
 	margin-right:auto;
 	}
+
 
 
 
