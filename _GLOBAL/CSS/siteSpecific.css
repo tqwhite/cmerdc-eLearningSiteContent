@@ -1,5 +1,5 @@
-BODY
-	{background-color: white !important;}
+
+
 
 /*---Slider Specific ---*/
 .anythingWindow {
@@ -15,6 +15,21 @@ BODY
 	margin: 20px 0px 10px !important;
 	}
 	
+/* ------NavBar --------*/
+.navBlock {
+	background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
+  background-image:      -o-linear-gradient(top, #fff 0%, #f8f8f8 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f8f8f8));
+  background-image:         linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+}
+
+	
 /*----- Typography --*/
 .tagLine {
 	height: 40px;
@@ -29,7 +44,28 @@ BODY
 		margin: 0px 10px 0px;
 		}
 }
-	
+
+
+
+
+/* Dropdowns in Nav  */
+ul.dropdown li.hover ,
+ul.dropdown li  a:hover,
+ul.dropdown li a:active,
+ul.dropdown li .active{
+    background-image: -webkit-linear-gradient(top, #3e3f3a 0%, #646561 100%);
+  background-image:      -o-linear-gradient(top, #3e3f3a 0%, #646561 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3e3f3a), to(#646561));
+  background-image:         linear-gradient(to bottom, #3e3f3a 0%, #646561 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3e3f3a', endColorstr='#ff646561', GradientType=0);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
+   color: #fff;  
+		  
+}
+
+
 /*---- Buttons Success----*/
 .btn-success{
 	color:white !important;
@@ -41,12 +77,14 @@ BODY
 .btn-success :focus,
 .btn-success .active  {
 	color: white !important;
+	font-weight: bold;
 	}
 	
 /*---- Buttons Primary----*/
 .btn-primary{
 	color:white !important;
 	font-weight: bold !important;
+
 	}
 .btn-primary :hover,
 .btn-primary :active,
@@ -60,6 +98,7 @@ BODY
 .btn-info{
 	color:white !important;
 	font-weight: bold !important;
+
 	}
 .btn-info :hover,
 .btn-info :active,
@@ -67,6 +106,35 @@ BODY
 .btn-info :focus,
 .btn-info .active  {
 	color: white !important;
+	font-weight: bold !important;
+	}
+	
+/*---- Buttons Warning----*/
+.btn-warning{
+	color:white !important;
+	font-weight: bold !important;
+	}
+.btn-warning :hover,
+.btn-warning :active,
+.btn-warning :visited,
+.btn-warning:focus,
+.btn-warning .active  {
+	color: white !important;
+	font-weight: bold !important;
+	}
+	
+/*---- Buttons Danger----*/
+.btn-danger{
+	color:white !important;
+	font-weight: bold !important;
+	}
+.btn-danger :hover,
+.btn-danger :active,
+.btn-danger :visited,
+.btn-danger:focus,
+.btn-danger .active  {
+	color: white !important;
+	font-weight: bold !important;
 	}
 	
 /*----Social Buttons ---*/
@@ -77,6 +145,98 @@ BODY
 	margin-left:auto;
 	margin-right:auto;
 	}
+	
+/*--------Blog Rss Css -----*/
+/* begin styles for RSS Feed */
+
+div.feedburnerFeedBlock{
+	 margin: 1em;
+	 width: 100%;
+	font-size: 80%;
+	 
+}
+
+p.feedTitle img {padding:0.5em;}
+.feedTitle {
+	text-decoration: none;
+	font-family: verdana, sans-serif;
+	font-size: 100%;
+	font-weight:bold;
+	margin: 0px;
+	padding:0em;
+	text-align: left;
+}
+
+div.feedburnerFeedBlock span.headline a {
+    font-weight: normal;
+    font-size: 1.1em;
+    color: #C60;
+}
+
+div.feedburnerFeedBlock ul {
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.feedburnerFeedBlock ul li {
+    margin-bottom: 2em;
+    padding-left: 0px;
+    text-indent: 0px;
+}
+
+div.feedBurnerFeedBlock ul li  a{
+	color:#F60;
+	font-weight:bold;
+	font-family:arial, sans-serif;
+	}
+	
+div.feedBurnerFeedBlock ul li a:visited {
+	color:#330066;
+}
+
+.date {
+	font-size: 85%;
+	font-weight : normal;
+	color: #F60;
+	} 
+
+.fbsubscribelink a {
+  font-size: small;
+  }
+  
+
+/* buttons modeled from http://www.wellstyled.com/css-inline-buttons.html */
+
+.pod-play {
+   _width:12em;
+   margin: 0 0.2em; padding: 0.1em 0; _padding:0;
+   
+   white-space:nowrap;
+   text-decoration: none;
+   vertical-align:middle;
+   background: #fb6;
+   color: black;
+   }
+.pod-play em {
+   _width:1em; _cursor:hand;
+   font-style: normal;
+   margin:0; padding: 0.1em 0.5em;
+   background: white;
+   color: #222;
+   }
+.pod-play span {
+   _width:1em; _cursor:hand;
+   margin:0; padding: 0.1em 0.5em 0.1em 0.3em;
+   }
+.pod-play:hover {
+   background: #666;
+   color: white;
+   }
+.pod-play:hover em {
+   background: black;
+   color: white
+   }
 
 
 
