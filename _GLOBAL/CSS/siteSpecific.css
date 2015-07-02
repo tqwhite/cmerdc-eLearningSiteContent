@@ -15,6 +15,10 @@
 	margin: 20px 0px 10px !important;
 	}
 	
+.fullname {
+	color:#3b5998;
+}
+	
 /* ------NavBar --------*/
 .navBlock {
 	background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
@@ -45,25 +49,187 @@
 		}
 }
 
-
-
-
 /* Dropdowns in Nav  */
+
+ul.dropdown li a {
+	color:#3b5998;
+}
+
 ul.dropdown li.hover ,
 ul.dropdown li  a:hover,
 ul.dropdown li a:active,
 ul.dropdown li .active{
-    background-image: -webkit-linear-gradient(top, #3e3f3a 0%, #646561 100%);
-  background-image:      -o-linear-gradient(top, #3e3f3a 0%, #646561 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#3e3f3a), to(#646561));
-  background-image:         linear-gradient(to bottom, #3e3f3a 0%, #646561 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3e3f3a', endColorstr='#ff646561', GradientType=0);
+    background-image: -webkit-linear-gradient(top, #8b9dc3 0%, #dfe3ee 100%);
+  background-image:      -o-linear-gradient(top, #8b9dc3 0%, #dfe3ee 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#8b9dc3), to(#dfe3ee));
+  background-image:         linear-gradient(to bottom, #8b9dc3 0%, #dfe3ee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8b9dc3', endColorstr='#ffdfe3ee', GradientType=0);
   background-repeat: repeat-x;
-  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
-          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
-   color: #fff;  
+  -webkit-box-shadow: inset 0 3px 9px rgba(59, 89, 152, .075);
+          box-shadow: inset 0 3px 9px rgba(59, 89, 152, .075); 
 		  
 }
+
+
+/* --- Carousel ---*/
+
+/* Carousel Fade Effect */
+.carousel.carousel-fade .item {
+	-webkit-transition: opacity 1s linear;
+	-moz-transition: opacity 1s linear;
+	-ms-transition: opacity 1s linear;
+	-o-transition: opacity 1s linear;
+	transition: opacity 1s linear;
+	opacity: .3;
+}
+.carousel.carousel-fade .active.item {
+	opacity: .7;
+}
+.carousel.carousel-fade .active.left,
+.carousel.carousel-fade .active.right {
+	left: 0;
+	z-index: 2;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+/* Carousel Overlay */
+.carousel-overlay {
+	position: absolute;
+	bottom: 100px;
+	right: 0;
+	left: 0;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 500px;
+  opacity: .7;
+  background-size: cover;
+  background-position: center center;
+}
+
+/*---Service List Styling --*/
+#servicelist {
+	list-style: circle outside none;
+	text-align:left;
+}
+
+.styledlist {
+	margin-left: 1em;
+	list-style: circle outside none;
+	text-align:left;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.circleimg{
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+
+/* Add this */
+    line-height:140px; /* as height */
+    text-align:center;
+}
+
+.circleimg .glyphicon {
+	font-size: 75px;
+	line-height: 140px;
+}
+
+.lt-blue {
+	background-color: #dfe3ee;
+	color: white;
+}
+
+.md-blue {
+	background-color: #8b9dc3;
+	color: white;
+}
+
+.dk-blue {
+	background-color:  	#3b5998;
+	color: white;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+/* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+/* -- Glyphicon Animations --*/
+#flip-glyphicon {
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+}
+
 
 
 /*---- Buttons Success----*/
@@ -82,18 +248,120 @@ ul.dropdown li .active{
 	
 /*---- Buttons Primary----*/
 .btn-primary{
+	background-color:#3b5998;
+	border-color:#2f4779;
 	color:white !important;
 	font-weight: bold !important;
 
 	}
-.btn-primary :hover,
-.btn-primary :active,
-.btn-primary :visited,
-.btn-primary :focus,
-.btn-primary .active  {
-	color: white !important;
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #23355b;
+  border-color: #1d2c4c;
+}
+/*---Medium Blue Button ---*/
+.btn-md-blue{
+	background-color:#8b9dc3;
+	border-color:#6f7d9c;
+	color:white !important;
+	font-weight: bold !important;
+
 	}
+.btn-md-blue:hover,
+.btn-md-blue:focus,
+.btn-md-blue.focus,
+.btn-md-blue:active,
+.btn-md-blue.active,
+.open > .dropdown-toggle.btn-md-blue {
+  color: #fff;
+  background-color: #6f7d9c;
+  border-color: #616d88;
+}	
+.btn-md-blue:active,
+.btn-md-blue.active,
+.open > .dropdown-toggle.btn-md-blue {
+  background-image: none;
+}
+.btn-md-blue.disabled,
+.btn-md-blue[disabled],
+fieldset[disabled] .btn-md-blue,
+.btn-md-blue.disabled:hover,
+.btn-md-blue[disabled]:hover,
+fieldset[disabled] .btn-md-blue:hover,
+.btn-md-blue.disabled:focus,
+.btn-md-blue[disabled]:focus,
+fieldset[disabled] .btn-md-blue:focus,
+.btn-md-blue.disabled.focus,
+.btn-md-blue[disabled].focus,
+fieldset[disabled] .btn-md-blue.focus,
+.btn-md-blue.disabled:active,
+.btn-md-blue[disabled]:active,
+fieldset[disabled] .btn-md-blue:active,
+.btn-md-blue.disabled.active,
+.btn-md-blue[disabled].active,
+fieldset[disabled] .btn-md-blue.active {
+  background-color: #8b9dc3;
+  border-color: #7d8daf;
+}
+.btn-md-blue .badge {
+  color: #8b9dc3;
+  background-color: #fff;
+}
 	
+/*----Light Blue Button ---*/
+.btn-lt-blue{
+	background-color:#dfe3ee;
+	border-color:#b2b5be;
+	color:#3b5998;
+	font-weight: bold !important;
+
+	}
+.btn-lt-blue:hover,
+.btn-lt-blue:focus,
+.btn-lt-blue.focus,
+.btn-lt-blue:active,
+.btn-lt-blue.active,
+.open > .dropdown-toggle.btn-lt-blue {
+  color: #3b5998;
+  background-color: #b2b5be;
+  border-color: #9c9ea6;
+}	
+.btn-lt-blue:active,
+.btn-lt-blue.active,
+.open > .dropdown-toggle.btn-lt-blue {
+  background-image: none;
+}
+.btn-lt-blue.disabled,
+.btn-lt-blue[disabled],
+fieldset[disabled] .btn-lt-blue,
+.btn-lt-blue.disabled:hover,
+.btn-lt-blue[disabled]:hover,
+fieldset[disabled] .btn-lt-blue:hover,
+.btn-lt-blue.disabled:focus,
+.btn-lt-blue[disabled]:focus,
+fieldset[disabled] .btn-lt-blue:focus,
+.btn-lt-blue.disabled.focus,
+.btn-lt-blue[disabled].focus,
+fieldset[disabled] .btn-lt-blue.focus,
+.btn-lt-blue.disabled:active,
+.btn-lt-blue[disabled]:active,
+fieldset[disabled] .btn-lt-blue:active,
+.btn-lt-blue.disabled.active,
+.btn-lt-blue[disabled].active,
+fieldset[disabled] .btn-lt-blue.active {
+  background-color: #dfe3ee;
+  border-color: #c8ccd6;
+}
+.btn-lt-blue .badge {
+  color: #dfe3ee;
+  background-color: #fff;
+}
+
 /*---- Buttons Info----*/
 .btn-info{
 	color:white !important;
@@ -136,7 +404,24 @@ ul.dropdown li .active{
 	color: white !important;
 	font-weight: bold !important;
 	}
-	
+/* ---Special Buttons ---*/
+#servicebuttons.btn-primary  {
+	background-color: transparent;
+	border-color: transparent;
+	box-shadow: 0px 0px 0px rgba(255, 255, 255, 0.15) inset, 0px 0px 0px rgba(0, 0, 0, 0.075);
+}	
+
+#servicebuttons.btn-primary:hover,
+#servicebuttons.btn-primary:focus,
+#servicebuttons.btn-primary.focus,
+#servicebuttons.btn-primary:active,
+#servicebuttons.btn-primary.active,
+#servicebuttons.open > .dropdown-toggle.btn-primary{
+  color: #333333 !important;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
 /*----Social Buttons ---*/
 #socialbuttons {
 	display: block;
