@@ -1,6 +1,12 @@
 
-
-
+/** Accesssibility Color Contrast **/
+a{color:#0045ac;}
+.footerSiteDrectoryBlock .sitemapBlock .sitemapTitle {
+color: #0045ac;
+}
+.footer {
+    color: #222;
+}
 /*---Slider Specific ---*/
 .anythingWindow {
 	background-color: #eee;
@@ -14,7 +20,12 @@
 	border-bottom: 0 none !important;
 	margin: 20px 0px 10px !important;
 	}
-	
+h1.headerTitle {
+font-size: 20px;
+}
+h2.headerTitle {
+font-size: 18px;
+}
 .fullname {
 	color:#3b5998;
 }
@@ -523,6 +534,8 @@ div.feedBurnerFeedBlock ul li a:visited {
    color: white
    }
 
+/* Bootstrap Accessibility CSS*/
+.btn:focus{outline:dotted 2px #000}div.active:focus{outline:dotted 1px #000}a:focus{outline:dotted 1px #000}.close:hover,.close:focus{outline:dotted 1px #000}.nav>li>a:hover,.nav>li>a:focus{outline:dotted 1px #000}.carousel-inner>.item{position:absolute;top:-999999em;display:block;-webkit-transition:0.6s ease-in-out left;-moz-transition:0.6s ease-in-out left;-o-transition:0.6s ease-in-out left;transition:0.6s ease-in-out left}.carousel-inner>.active{top:0}.carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{position:relative}.carousel-inner>.next,.carousel-inner>.prev{position:absolute;top:0;width:100%}.alert-success{color:#2d4821}.alert-info{color:#214c62}.alert-warning{color:#6c4a00;background-color:#f9f1c6}.alert-danger{color:#d2322d}.alert-danger:hover{color:#a82824}
 
 
 
