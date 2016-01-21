@@ -1,4 +1,8 @@
-
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
 /** Accesssibility Color Contrast **/
 a{color:#0045ac;}
 .footerSiteDrectoryBlock .sitemapBlock .sitemapTitle {
@@ -32,7 +36,7 @@ font-size: 18px;
 	
 /* ------NavBar --------*/
 .navBlock {
-	background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
+  background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
   background-image:      -o-linear-gradient(top, #fff 0%, #f8f8f8 100%);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f8f8f8));
   background-image:         linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
@@ -40,8 +44,6 @@ font-size: 18px;
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
-          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
 }
 
 	
@@ -431,6 +433,125 @@ fieldset[disabled] .btn-lt-blue.active {
   color: #333333 !important;
   background-color: #e6e6e6;
   border-color: #adadad;
+}
+/********************************************************************/
+/*** PANEL PRIMARY ***/
+
+.with-nav-tabs.panel-primary > .panel-heading {
+    background-image: linear-gradient(to bottom, #3b5998 0px, #4c70ba 100%);
+    background-repeat: repeat-x;
+}
+.with-nav-tabs.panel-primary {
+	border-color: #4c70ba;
+}
+
+.with-nav-tabs.panel-primary .nav-tabs > li > a,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: #fff;
+}
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+	color: #fff;
+	background-color: #4264ab; /*#8b9dc3;*/
+	border-color: transparent;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+	color: #4c70ba;
+	background-color: #fff;
+	border-color: #4c70ba;
+	border-bottom-color: transparent;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: #4264ab; /*#8b9dc3;*/
+    border-color: #3b5998;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: #fff;   
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: #4264ab; /*#8b9dc3;*/
+	color: #4c70ba;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    background-color: #4c70ba;
+}
+
+/*-----OtherColor Panels -----------*/
+/*---Bronze---*/
+.panel-bronze{
+    border-color: #b9722d !important;
+}
+.panel-bronze> .panel-heading {
+    color: #FFF;
+    border-color: #b9722d;
+    background-color: #cd7f32;
+	background-image: linear-gradient(to bottom, #d28c47 0px, #cd7f32 100%);
+	background-repeat: repeat-x;
+}
+/*---Silver---*/
+.panel-silver{
+    border-color: #a7a7a7 !important;
+}
+.panel-silver> .panel-heading {
+    color: #333;
+    border-color: #a7a7a7;
+    background-color: #c0c0c0;
+	background-image: linear-gradient(to bottom, #cdcdcd 0px, #c0c0c0 100%);
+	background-repeat: repeat-x;
+}
+/*---Gold---*/
+.panel-gold{
+    border-color: #e6c200 !important;
+}
+.panel-gold> .panel-heading {
+    color: #333;
+    border-color: #e6c200;
+    background-color: #ffd700;
+	background-image: linear-gradient(to bottom, #ffdb1a 0px, #ffd700 100%);
+	background-repeat: repeat-x;
+}
+/*---Platinum---*/
+.panel-platinum{
+    border-color: #cdcbc7 !important;
+}
+.panel-platinum> .panel-heading {
+    color: #333;
+    border-color: #cdcbc7;
+    background-color: #e5e4e2;
+	background-image: linear-gradient(to bottom, #f1f1ef 0px, #e5e4e2 100%);
+	background-repeat: repeat-x;
+}
+
+/*--- Icon List Style ---*/
+#iconlist ul {
+	list-style: none;
+	padding: 0;
+}
+#iconlist li:before {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding: 0 10px;
+	content:"\e250";
+}
+#iconlist.small li:before {
+	font-size: 75%;
+	padding: 0;
 }
 
 /*----Social Buttons ---*/
